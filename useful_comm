@@ -1,0 +1,44 @@
+##root access
+sudo -H gnome-terminal
+
+##installing python packages
+python -m pip install --upgrade pip
+pip install --user numpy scipy matplotlib ipython jupyter pandas sympy nose
+pip install opencv-python
+pip install tifffile
+sudo apt-get install cython	
+pip install PyMaxflow
+
+GitHub manual
+---------------------------------------------------
+##Download and install Git
+sudo apt-get install git
+
+##Configuring GitHub
+git config --global user.name "user_name"
+git config --global user.email "email_id"
+
+##Creating a local repository
+git init Mytest
+cd MyTest
+
+##Creating a README file to describe the repository
+gedit README
+
+
+##Adding repository files to an index
+##README and sample.c
+##add it to the index by using the following 2 commands:
+git add README
+git add smaple.c
+
+##Committing changes made to the index
+git commit -m "some_message"
+
+##Creating a repository on GitHub
+##Important Note: Make sure you replace 'user_name' and 'Mytest' in the path with your Github username and folder before running the command!
+git remote add origin https://github.com/user_name/Mytest.git
+
+##Pushing files in local repository to GitHub repository
+git push origin master
+------------------------------------------------------------
